@@ -1,5 +1,21 @@
 # 1740 Catastici
 
+# Repository Structure
+
+```plaintext
+1740-catastici/
+├── README.md                                    # Main project documentation
+├── 1740_catastici_version20250625.geojson       # Final processed geospatial data file (31MB)
+└── index/                                       # Data processing workflow and documentation
+    ├── README.md                                # Detailed project documentation
+    ├── pipeline/                                # 10-step data processing pipeline
+    ├── utils/                                   # Utility functions
+    ├── dictionaries/                            # Dictionaries and mapping files
+    ├── data_catastici/                          # Raw and intermediate data files
+    └── az_documentation/                        # Additional project documentation
+```
+
+
 # Files
 * `1740_catastici_version20250625.geojson`: transcription of the Catastici with data relating to the disambiguation of people and institution or other kind of named entities. Information on how such data was produced can be found in `index/README.md`.
 * `index`: scripts and documentation on how people disambiguation and named entity recognition was performed to obtain the aforementionned file by Carlo Musso. Left here as documentation/inspiration.
