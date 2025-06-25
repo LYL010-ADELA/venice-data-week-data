@@ -1,8 +1,7 @@
 # 1740 Catastici
 
 # Files
-* `catastici_1740_full_geojson_20240917.geojson`: version of the dataset where all single entries have been mapped to their corresponding gps coordinate on the map. It is merely present here for ease of browsing the data in Graphical Information System application such as QGIS, and should not be processed as such, use the `text_data_20240924.json` instead.
-* `catastici_text_data_20240924.json`: actual transcription of the Catastici with data relating to the disambiguation of people and institution or other kind of named entities. Information on how such data was produced can be found in `index/README.md`. This file should be used as the main dataset file for analysis and processing.
+* `1740_catastici_version20250625.geojson`: transcription of the Catastici with data relating to the disambiguation of people and institution or other kind of named entities. Information on how such data was produced can be found in `index/README.md`.
 * `index`: scripts and documentation on how people disambiguation and named entity recognition was performed to obtain the aforementionned file by Carlo Musso. Left here as documentation/inspiration.
 
 
