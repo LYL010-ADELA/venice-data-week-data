@@ -10,33 +10,38 @@
 
 ## From the transcription
 
-- `id`: manual id of the entry drawn using a pencil. The sequence of number was restarted at each parish. Is merely useful to  
--  `ten_name`: Name of the tenant,
--  `function`: Function of the parcel
--  `an_rendi`: rent paid.
--  `place`: indication of the place where the parcel is located, can contain information about the place's function or a unique toponym related to this place.
+-  `owner_name`: Name of the owner (raw).
+-  `ten_name`: Name of the tenant (raw).
+-  `function`: Function of the parcel.
+-  `an_rendi`: Rent paid.
+-  `place`: Indication of the place where the parcel is located, can contain information about the place's function or a unique toponym related to this place.
+- `quantity_income`: In rare cases, rent is not collected in cash, but in other forms. This field is the amount.
+- `quality_income`: In rare cases, rent is not collected in cash, but in other forms. This field is the nature.
+- `sestiere`: District name.
+- `geometry`: Position of the point.
 
+  
 ## Operational
 
-- `uidx` unique index for each entry, used for uniquerly identifying separate object
-- `uid`: internal identifiant related to the original entry.
-- `path_img`: name of the original scan image containing the information.
-- `author`: first name of the person that transcribed the entry.
+- `uid`: Unique identifier of the entry drawn using a pencil. The sequence of number was restarted at each parish. It is a combination of the parish (three-letter code) and the number within the parish. `CNC-0001` is e.g. the entry #0001 for the San Cancian parish.
+- `author`: author of the transcription.
+- `tif_path_img`: Path to the TIF scan of the archival document.
 
 ## Standardized / Additonial fields
-- `id_napo`: whenever found, the corresponding parcel in the Sommarioni 1808. 
-- `sestiere`: the sestiere (district) of the entry as an acronym. Possible values are  SM (`San Marco`), CS (`Castello`), CC/CN (`Cannaregio`), SP (`San Polo`),  SC (`Santa Croce`) and DD (`Dorsoduro`),
-- `geometry`: single point coordinate where the parcel is located in CRS84 format.
-- `parish_std`: standardized name of the parish.
-- `owner_code`: code of owner type
-- `owner_count`: number of owners (type `int`)
-- `owner_count_remark`: remark for owner count if exact number is not applicable (e.g. *fratelli*)
-- `owner_entity`: owner entity name (blank if owner is not an entity)
-- `owner_entity_group`: owner entity group standardisation (blank if owner is not an entity)
-- `owner_first_name`: owner first name (blank if owner is not an person)
-- `owner_family_name`: owner last name (blank if owner is not an person)
-- `owner_family_group`: owner family group standardisation (blank if owner is not an person)
-- `owner_title`: owner title (blank if owner has not title)
-- `owner_title_std`: standardisation or propagation of owner title
-- `owner_mestiere`: owner *mestiere* (blank if owner has no *mestiere*)
-- `owner_mestiere_std`: standardisation of owner title *mestiere*
+
+- `owner_code`: Code of owner type
+- `owner_count`: number of owners (type `str` as some entries have an unspecified number >1 and are listed as 1+)
+- `id_napo`: Whenever found, the corresponding parcel in the Sommarioni 1808.
+- `PP_Function_TOP`: Aggregated category of the function.
+- `PP_Function_MID`: Category of the function.
+- `PP_Function_PROPERTY`: Type of ownership (when specified).
+- `PP_Function_GEOMETRY`: Type of geometry (when specified).
+- `PP_Bottega_STD`: Standardisation of shop nature.
+- `PP_Bottega_COUNT`: Number of shops.
+- `PP_Bottega_TRAD`: Translation of the shop nature.
+- `PP_Bottega_METACATEGORY`: Aggregated category of shops.
+- `PP_Owner_Title`: Owner title.
+- `PP_Owner_Entity`: Owner entity.
+- `PP_Owner_FirstName`: Owner first name.
+- `PP_Owner_LastName`: Owner last name.
+- `PP_Owner_Notes`: Notes on the owner field.
